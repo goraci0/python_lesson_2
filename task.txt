@@ -86,9 +86,14 @@ else: print('No')
 Задача 9
 Найти максимальную цифру в числе
 '''
-number=input("Введите число: ")
-maximal_number = max([int(i) for i in str(number)])
-print(maximal_number)
+a = int(input('Enter number'))
+m = a%10
+a = a//10
+while a > 0:
+    if a%10 > m:
+        m = a%10
+    a = a//10
+print(m)
 
 '''
 Задача 10
